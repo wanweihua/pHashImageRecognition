@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PHashMarshaled")]
+[assembly: AssemblyTitle("PHashCS")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PHashMarshaled")]
+[assembly: AssemblyProduct("PHashCS")]
 [assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("cd10e114-7f3f-47eb-9679-25dbc6b3dbf7")]
+[assembly: Guid("4d4e952c-6ddf-4f87-a0c1-709abc8639f8")]
 
 // Version information for an assembly consists of the following four values:
 //

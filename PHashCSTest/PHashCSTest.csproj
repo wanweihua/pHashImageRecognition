@@ -47,8 +47,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PHashMarshaled\PHashCS.csproj">
-      <Project>{1CB18AAD-212F-493A-A37A-47CF3B34E51F}</Project>
+    <ProjectReference Include="..\PHashCS\PHashCS.csproj">
+      <Project>{5B3FA40C-38E8-4051-B5A3-8BDF4DCFC964}</Project>
       <Name>PHashCS</Name>
     </ProjectReference>
   </ItemGroup>

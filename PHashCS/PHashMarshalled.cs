@@ -6,13 +6,13 @@ using System.Runtime.InteropServices;
 
 namespace PHashCS
 {
-    public class PHashMarshaled
+    class PHashMarshalled
     {
         [DllImport(@"pHashCpp.dll")]
         unsafe public static extern int ImageHash(IntPtr filename, IntPtr hash);
-        
+
         [DllImport(@"pHashCpp.dll")]
-        unsafe public static extern int HammingDistance(UInt64 hashA, UInt64 hashB);
+        unsafe public static extern int HammingDistance(ulong hashA, ulong hashB);
 
         [DllImport(@"pHashCpp.dll")]
         unsafe public static extern int CompareImageFiles(IntPtr fileA, IntPtr fileB);

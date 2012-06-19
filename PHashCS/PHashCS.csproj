@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1CB18AAD-212F-493A-A37A-47CF3B34E51F}</ProjectGuid>
+    <ProjectGuid>{5B3FA40C-38E8-4051-B5A3-8BDF4DCFC964}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PHashCS</RootNamespace>
-    <AssemblyName>PHashMarshaled</AssemblyName>
+    <AssemblyName>PHashCS</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PHashCS.cs" />
-    <Compile Include="PHashMarshaled.cs" />
+    <Compile Include="PHashMarshalled.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -20,8 +20,8 @@ namespace PHashCS
         {
             IntPtr filenamePtr = Marshal.StringToHGlobalAnsi(filename);
             IntPtr hashPtr = Marshal.AllocHGlobal(sizeof(UInt64));
-            int returnCode = PHashMarshaled.ImageHash(filenamePtr, hashPtr);
-            hash = (ulong) Marshal.ReadInt64(hashPtr);
+            int returnCode = PHashMarshalled.ImageHash(filenamePtr, hashPtr);
+            hash = (ulong)Marshal.ReadInt64(hashPtr);
             return returnCode;
         }
 
@@ -33,7 +33,7 @@ namespace PHashCS
         /// <returns>The Hamming distance between the two hashes.</returns>
         public static int HammingDistance(ulong hashA, ulong hashB)
         {
-            return PHashMarshaled.HammingDistance(hashA, hashB);
+            return PHashMarshalled.HammingDistance(hashA, hashB);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace PHashCS
         {
             IntPtr filenameAPtr = Marshal.StringToHGlobalAnsi(filenameA);
             IntPtr filenameBPtr = Marshal.StringToHGlobalAnsi(filenameB);
-            return PHashMarshaled.CompareImageFiles(filenameAPtr, filenameBPtr);
+            return PHashMarshalled.CompareImageFiles(filenameAPtr, filenameBPtr);
         }
     }
 }
