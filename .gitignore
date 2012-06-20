@@ -3,6 +3,7 @@
 *.pdb
 *.lib
 *.XML
+*.zip
 
 Debug/*
 Release/*
