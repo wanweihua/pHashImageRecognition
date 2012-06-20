@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using PHashCS;
+using System.Threading;
 
 namespace PHashCSTest
 {
     class Program
     {
         static void Main(string[] args)
+        {
+            TestAsynchronous();
+            TestSynchronous();
+            return;
+        }
+
+        private static void TestSynchronous()
         {
             string diff_1 = "diff1.jpg",
                    same_1 = "same1.jpg",
@@ -30,8 +38,33 @@ namespace PHashCSTest
                                             (end_diffsame - start).Seconds));
             Console.WriteLine(String.Format("Same-Same test elapsed in {0}s.",
                                             (end_samesame - end_diffsame).Seconds));
+        }
 
-            return;
+        private static void TestAsynchronous()
+        {
+            PHashCS.EventListenerSample listener = new PHashCS.EventListenerSample();
+
+            Thread thread1 = new Thread(CompareDiffSame);
+            Thread thread2 = new Thread(CompareSameSame);
+
+            thread1.Start();
+            Console.WriteLine("Async diff-same started...");
+            thread2.Start();
+            Console.WriteLine("Async same-same started...");
+        }
+
+        public static void CompareDiffSame()
+        {
+            string diff_1 = "diff1.jpg",
+                   same_1 = "same1.jpg";
+            PHashCS.PHashCS.BeginCompareImageFiles(diff_1, same_1);
+        }
+
+        public static void CompareSameSame()
+        {
+            string same_1 = "same1.jpg",
+                   same_2 = "same2.jpg";
+            PHashCS.PHashCS.BeginCompareImageFiles(same_1, same_2);
         }
     }
 }
